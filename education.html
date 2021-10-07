@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <title>Georgia 2020 Election </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <!--Google Fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+ 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+   <!---------------------->
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/leaflet-search.css"/>
+  <link rel="stylesheet" href="leaflet.zoomhome.css"/>
+	<script src="leaflet.zoomhome.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/leaflet/leaflet-search.js"></script>
+	<script type="text/javascript" src="data/education.js"></script>
+	<script type="text/javascript" src="data/Results.js"></script>
+	<script type="text/javascript" src="lib/jquery-3.3.1.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 750px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+  <style>
+    .leaflet-touch .leaflet-bar a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    /*This is the home button image*/
+    background-image: url("lib/leaflet/images/georgiaButton15px.jpg");
+ }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+   
+
+    <div class="col-sm-9">
+      <div id='map' style="height:750px" ></div>
+    </div>
+       <div class="col-sm-3 sidenav">
+      <h2 class="ga2020title" style="font-weight: bold">Georgia 2020 Election</h2>
+         <p  style="font-size: 14px"> What factors could have played a role in this historic election? Lets learn more about the voters of Georgia. Click an option below, select a factor, and hover a county to view exact details.  </p>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="index.html" title="This will show you results" style="text-decoration: none; color:#fff;"> Results  </a></li>
+        <li class="active"><a href="labor.html" title="This will show you labor statistics" style="text-decoration: none; color:#fff;"> Labor Statistics  </a></li>
+        <li class="active"><a href="education.html" title="This will show you education statistics" style="text-decoration: none; color:#fff;"> Education </a>  </li>
+        <li class="active"><a href="demographics.html" title="This will show you voter demographics by race" style="text-decoration: none; color:#fff;"> Demographics by Race  </a></li>
+      </ul><br>
+      <h4 class="ga2020info" style="font-weight: bold"> The map to the left shows the education statistics per county</h4>
+           <p style="font-style: italic"> Does education have any impact on elections? </p>
+           <p> Hover over a county to find details on education statistics. 
+           This data comes from: <a href="https://georgiadata.org/data/data-tables" target="_blank">
+           https://georgiadata.org/data/data-tables</a></p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/educationmain.js"></script>
+<footer class="container-fluid">
+  <p>Created By: <a href="https://avstark-gis.github.io/avstark-gis-572Portfolio/" target="_blank">Alissa Stark</a>, <a href="https://lancelot912.github.io/#Portfolio" target="_blank">Lance Lazarte</a>, <a href="https://jen-johnson.github.io/portfolio.html" target="_blank">Jenna Johnson</a></p>
+</footer>
+
+</body>
+</html>
